@@ -68,17 +68,17 @@ const HomeDashboard = () => {
                         <p className="card_title"> Lights </p>
                     </Link> 
                 
-                    <Link  className="card_container" to='/Climate' style={{textDecoration:"none"}}> 
+                    <Link  className="display_none" to='/Climate' style={{textDecoration:"none"}}> 
                         <img className="card_image" src={Climate}/>
                         <p className="card_title"> Climate </p>
                     </Link> 
 
-                    <Link  className="card_container" to='/Security' style={{textDecoration:"none"}}> 
+                    <Link  className="display_none" to='/Security' style={{textDecoration:"none"}}> 
                         <img className="card_image" src={Security}/>
                         <p className="card_title"> Security </p>
                     </Link> 
                 
-                    <Link  className="card_container" to='/PoolSpa' style={{textDecoration:"none"}}> 
+                    <Link  className="display_none" to='/PoolSpa' style={{textDecoration:"none"}}> 
                         <img className="card_image" src={Pool}/>
                         <p className="card_title"> Pool - Spa </p>
                     </Link> 

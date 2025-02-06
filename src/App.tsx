@@ -18,32 +18,40 @@ import Climate  from './structure/dashboard/ClimateDashboard';
 import Security from './structure/dashboard/SecurityDashboard'
 import PoolSpa from './structure/dashboard/PoolSpaDashboard';
 
-// Pages
+// Pages -------------------------------------------------------------------------
 
-import Mediaroom from './structure/page/mediaroom';
-import Gym from './structure/page/gym';
+// upStairs
+import MasterBedroom from './structure/page/upStairs/masterbedroom';
+import GuestBedroom from './structure/page/upStairs/guestbedroom';
+import GuestBathroom from "./structure/page/upStairs/guestbathroom"
+import StevesBath from './structure/page/upStairs/stevesbath';
+import EllensOffice from './structure/page/upStairs/ellensoffice';
+import EllensBath from './structure/page/upStairs/ellensbath';
+import EllensExcercise from './structure/page/upStairs/ellensexcercise';
+import Mediaroom from './structure/page/upStairs/mediaroom';
 
-import BreakfastNook from './structure/page/breakfastnook';
-import FamilyRoom from './structure/page/FamilyRoom';
-import Bar from './structure/page/bar'
 
-import GameRoom from './structure/page/gameroom';
-import MasterBedroom from './structure/page/masterbedroom';
-import MasterBathroom from './structure/page/masterbathroom'
-import Office from './structure/page/office';
+// main
+import Breakfast from './structure/page/main/breakfast';
+import DinningRoom from './structure/page/main/dinningroom';
+import FamilyRoom from './structure/page/main/FamilyRoom';
+import GameRoom from './structure/page/main/gameroom';
+import KitchenCabient from './structure/page/main/kitchenCabinet';
 
-//lights only 
-import Backyard from './structure/page/backyard';
-import DinningRoom from './structure/page/dinningroom';
-import Foyer from './structure/page/foyer';
-import KidsRoom from './structure/page/kidsroom';
-import LivingRoom from './structure/page/livingroom';
-      
+// down stairs
+import Arcade from './structure/page/downStairs/arcade';
+
+
+
+
+
+
+
 // Tools
 import ScreenSize from './structure/tools/ScreenSize';
 
        
-     import imageBackground from "../src/assets/images/backgrounds/the-cleveland-museum-of-art-xylbmpHmZhM-unsplash.jpg"
+     import imageBackground from "../src/assets/images/backgrounds/willian-justen-de-vasconcellos-T_Qe4QlMIvQ-unsplash.jpg"
         
         
    
@@ -81,69 +89,96 @@ function App() {
     path: '/PoolSpa',
     element: <PoolSpa />
   },
-   //------------------------------------ Basement Floor
+  
+  //------------------------------------ Second Floor
+
+  {
+    path: '/masterbedroom',
+    element: <MasterBedroom />
+  },
+
+  {
+    path: '/guestbedroom',
+    element: <GuestBedroom />
+  },
+
+  {
+    path: '/guestbathroom',
+    element: <GuestBathroom />
+  },
+
+  {
+    path: '/stevesbath',
+    element: <StevesBath />
+  },
+
+  {
+    path: '/ellensoffice',
+    element: <EllensOffice />
+  },
+
+  {
+    path: '/ellensbath',
+    element: <EllensBath />
+  },
+
+  {
+    path: '/ellensexcercise',
+    element: <EllensExcercise />
+  },
+
   {
     path: '/mediaroom',
     element: <Mediaroom />
   },
-  {
-    path: '/gym',
-    element: <Gym />
-  },
+
+
    //------------------------------------ Main Floor
   {
-    path: '/breakfastnook',
-    element: <BreakfastNook />
+    path: '/breakfast',
+    element: <Breakfast/>
   },
   {
     path: '/familyroom',
     element: <FamilyRoom />
   },
-  {
-    path: '/bar',
-    element: <Bar />
-  },
+ 
   {
     path: '/dinningroom',
     element: <DinningRoom />
   },
-  {
-    path: '/foyer',
-    element: <Foyer />
-  }, {
-    path: '/livingroom',
-    element: <LivingRoom />
-  },
+ 
 
-  //------------------------------------ Second Floor
   {
     path: '/gameroom',
     element: <GameRoom />
   },
   {
-    path: '/masterbedroom',
-    element: <MasterBedroom />
+    path: '/kitchencabinet',
+    element: <KitchenCabient />
   },
-  {
-    path: '/masterbathroom',
-    element: <MasterBathroom />
-  },
-  {
-    path: '/office',
-    element: <Office />
-  },
-  {
-    path: '/kidsroom',
-    element: <KidsRoom />
-  },
+
+  
+   //------------------------------------ Main Floor
+   {
+    path: '/arcade',
+    element: <Arcade/>
+    },
+
+
+
+
+
+
+//---------------------------------------------
+
+  
+ 
+ 
 
   //-------------------------------------- outdoors
 
-    {
-      path:'/backyard',
-      element: <Backyard />
-    },
-
+  
 
   //------------------------------------ Tools
 

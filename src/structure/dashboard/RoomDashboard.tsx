@@ -54,38 +54,49 @@ const RoomsDashboard = () => {
             active: false,
             title:"Up Stairs",
             rooms:[
-                {"Master Bathroom":["media","music","light"]},
                 {"Master Bedroom":["media","music","light"]},
-                {"Game Room":["media","music","light"]},
-                {"Office":["media","music","light"]},
-                {"Kids Room":["light"]},
+                {"Guest Bedroom":["media","music","light"]},
+                {"Guest Bathroom":["media","music","light"]},
+
+                {"Steves Bath":["media","music","light"]},
+                {"Ellens Office":["media","music","light"]},
+                {"Ellens Bath":["media","music","light"]}, 
+                {"Ellens Excercise":["media","music","light"]}, 
+
+                
+                {"Media Room":["media","music","light"]},
             ]
         },
         location_2: {
             active: true,
             title:"Main",
             rooms:[
-                {"Breakfast Nook":["media","music","light"]},
                 {"Family Room":["media","music","light"]},
-                {"Bar":["media","music","light"]},    
+                {"Dinning Room":["media","music","light"]}, 
 
-                {"Dinning Room":["light"]}, 
-                {"Living Room":["light"]}, 
-                {"Foyer":["light"]}, 
+                {"Breakfast":["media","music","light"]},
+
+                {"Kitchen Cabinet":["media","music","light"]},    
+                {"Game Room":["media","music","light"]},   
+
+                
+               
             ]
         },
         location_3: {
             active: false,
             title:"Down Stairs",
             rooms:[
-                {'Media Room':["media","music","light"]}, 
-                {'Gym':["media","music","light"]}
+             
+                {'Arcade':["media","music","light"]},
+                {'Basketball Court':["media","music","light"]}
+
             ]
         },
         location_4: {
             active: false,
-            title:"Out Doors",
-            rooms:[  {"Backyard":["light"]},]
+            title:"null",
+            rooms:[]
         },
         
         location_5: {
