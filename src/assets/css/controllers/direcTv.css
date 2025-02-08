@@ -42,7 +42,7 @@
 
     .controller_nav{
         width: 100%;
-        height: 20%;
+        height: 15%;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -53,7 +53,7 @@
         .controller_nav_0,.controller_nav_1,.controller_nav_2,.controller_nav_3 {
             background-color: transparent;
             border: none;
-            height: 4rem;
+            height: 3rem;
             width: 5rem;
             display: flex;
             justify-content: center;
@@ -63,54 +63,51 @@
         .controller_nav_0_selected, .controller_nav_1_selected,.controller_nav_2_selected,.controller_nav_3_selected {
                 background-color: transparent;
                 border: none;
-                height: 4rem;
+                height: 3rem;
                 width: 5rem;
                 z-index: 0;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                filter: invert(78%) sepia(56%) saturate(7%) hue-rotate(314deg) brightness(150%) contrast(120%);       
-                border-bottom: solid 4px rgb(0, 0, 0);         
+                border: solid 3px rgb(0, 195, 255);  
+                border-radius: 30px;    
+                box-shadow: 0px 0px 10px rgb(255, 255, 255);   
             }
+
+            .controller_nav_1_selected img{
+                height: 2rem;
+          
+            }
+                .controller_nav_1 img{
+                    height: 2rem;
+                }
+
+            .controller_nav_2_selected .btn_image{
+                height: 3rem;                
+                position: relative;
+                top: -4px;
+            }
+                .controller_nav_2 .btn_image{
+                    height: 3rem;
+                    position: relative;
+                    top: -4px;
+                }
+
+            .controller_nav_3_selected img{
+                height: 2rem;
+            }
+                .controller_nav_3 .btn_image{
+                    height: 2rem;
+                }
+
+           
+
+
+
+
     
-                .controller_nav_0 img, 
-                .controller_nav_1 img, 
-                .controller_nav_2 img,
-                .controller_nav_3 img,
-                .controller_nav_0_selected img {
-                    height: 100%;
-                    filter: invert(9%) sepia(84%) saturate(0%) hue-rotate(247deg) brightness(87%) contrast(84%);
-                    z-index: 0; 
-                   
-                }
-                .controller_nav_0 img, 
-                .controller_nav_1 img, 
-                .controller_nav_2 img,
-                .controller_nav_3 img,
-                .controller_nav_1_selected img {
-                    height: 100%;
-                    filter: invert(9%) sepia(84%) saturate(0%) hue-rotate(247deg) brightness(87%) contrast(84%);
-                    z-index: 0; 
-                }
-                    .controller_nav_0 img, 
-                    .controller_nav_1 img, 
-                    .controller_nav_2 img,
-                    .controller_nav_3 img,
-                    .controller_nav_2_selected img {
-                        height: 100%;
-                        filter: invert(9%) sepia(84%) saturate(0%) hue-rotate(247deg) brightness(87%) contrast(84%);
-                        z-index: 0
-                    }
-                         .controller_nav_0 img, 
-                        .controller_nav_1 img, 
-                        .controller_nav_2 img,
-                        .controller_nav_3 img,
-                        .controller_nav_3_selected img {
-                            height: 100%;
-                            filter: invert(9%) sepia(84%) saturate(0%) hue-rotate(247deg) brightness(87%) contrast(84%);
-                            z-index: 0
-                        }
-   
+                
+                       
            
 
 
@@ -237,27 +234,40 @@
         grid-column: 3;
         grid-row: 1;
         height: 25%;
+        width: 4rem;
         border-radius: 0;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-        
-
     }
+        #chan_up img{
+            height: 50%;    
+        }
 
     #chan_title{
         grid-column: 3;
         grid-row: 2;
-
+        width: 4rem;
         border-radius: 0%;
-    
+        user-select: none;
+        animation: none;
     }
+        #chan_title h2{
+            font-weight: 100;
+        }
+
+
         #chan_title:active{
             animation: none;
+           
+            background-color: #3f3c3c;
+            box-shadow: rgb(0, 0, 0) 0px 5px 15px,
+      #ffffff 1.5px 1.5px 2px 0px inset, #c7c3c0 -1.5px -1.5px 2px 0px inset
         }
 
    
 
     #chan_down{
+        width: 4rem;
         grid-column: 3;
         grid-row: 3;
         height: 25%;
@@ -266,35 +276,31 @@
         border-bottom-right-radius: 10px;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    #dvr_img{
-        height: 80%;
-        position: relative;
-        bottom: 8px;
+    #chan_down img{
+        height: 50%;    
     }
 
-    .transport_button .key_num{
-        font-size: 1.5rem;
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
 .none_option{

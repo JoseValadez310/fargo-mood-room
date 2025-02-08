@@ -1,10 +1,10 @@
 // React 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
 
 // React Router 
-import { Link } from "react-router-dom"
+import { Link,useLocation  } from "react-router-dom"
 
 // CSS 
 import "../../assets/css/dashboard_css/Room_Dashboard.css"
@@ -18,7 +18,6 @@ import Audio   from "../../assets/images/icons/icons8-music.svg"
 import Light   from "../../assets/images/icons/noun-light-bulb-2216273.svg"
 import Climate from "../../assets/images/icons/icons8-winter.svg"
 import TV          from "../../assets/images/icons/icons8-tv.svg"
-import Clock from "../../components/Clock"
 
 
 type RoomObject = {
@@ -35,6 +34,31 @@ type RoomObject = {
 
 
 const RoomsDashboard = () => {
+
+    const location = useLocation();
+    const previousLocation = location.state?.previousLocation || "Unknown";
+
+   
+
+   useEffect( () => {
+
+    if(previousLocation === "Main"){
+        floorSelection("location_2")
+        console.log("location 2")
+    } else if(previousLocation === "Up Stairs"){
+        floorSelection("location_1")
+        console.log("location 1")
+
+    } else if(previousLocation === "Down Stairs"){
+        floorSelection("location_3")
+
+        console.log("location 3")
+
+    } else (
+        console.log(previousLocation)
+    )
+
+},[])
 
     
 
@@ -122,6 +146,12 @@ const RoomsDashboard = () => {
     })
 
 
+
+
+
+
+
+
     const activeLocations = Object.values(zone).filter(location => location.active);
 
 
@@ -158,15 +188,15 @@ const RoomsDashboard = () => {
                 </button>
             </Link>
 
-       
-
-      
-       <div className="nav_container">
-            <Link to={"/"}> 
-                <button className="back_button">
+            <Link to={"/"} className="back_btn_container" > 
+                <button className="back_button" >
                     <img src={menu_button}/>
                 </button>
-            </Link>
+            </Link>  
+
+      
+       <div className="bottom_nav">
+            
 
         <div className="nav">
                 <button className={zone.location_1.active ? "btn_selected" : 'btn_not_selected'} id={zone.location_1.title === "null"? "display_none":"floor_selection_nonactive"}  onClick={()=> floorSelection("location_1")}> <p>{zone.location_1.title}  </p> </button>
@@ -179,10 +209,6 @@ const RoomsDashboard = () => {
                 <button className={zone.location_8.active ? "btn_selected" : 'btn_not_selected'} id={zone.location_8.title === "null"? "display_none":"floor_selection_nonactive"}  onClick={()=> floorSelection("location_8")}> <p>{zone.location_8.title}  </p> </button>
         </div>
            
-
-        <div className="nav_clock">
-            <Clock />
-        </div>
 
        </div>
 
@@ -208,6 +234,7 @@ const RoomsDashboard = () => {
                                 to={`/${roomName.replace(/\s/g, "").toLowerCase()}`}
                                 className="room_card"
                                 key={roomIdx}
+
                             >
                             {/* Display the room name */}
                             <div className="test">

@@ -18,8 +18,8 @@ import Rooms   from "../../assets/images/icons/icons8-room.svg"
 import Audio   from "../../assets/images/icons/icons8-music.svg"
 import Light   from "../../assets/images/icons/noun-light-bulb-2216273.svg"
 import Climate from "../../assets/images/icons/icons8-winter.svg"
-import Pool    from "../../assets/images/icons8-swimming-pool.svg"
-import Security from "../../assets/images/icons8-smart-home-shield.svg"
+import Pool    from "../../assets/images/icons/icons8-indoor-swimming-pool.svg"
+import Security from "../../assets/images/icons/icons8-smart-home-shield.svg"
 
 const HomeDashboard = () => {
 

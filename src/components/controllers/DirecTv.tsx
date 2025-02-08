@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react"
 //CSS
 import "../../assets/css/controllers/direcTv.css"
-
 //Icons
 import center      from "../../assets/images/icons/icons8-initial-state.svg"
 import arrow       from "../../assets/images/icons/icons8-slide-up.svg"

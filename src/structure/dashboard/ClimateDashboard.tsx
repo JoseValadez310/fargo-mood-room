@@ -11,12 +11,6 @@ import "../../assets/css/dashboard_css/Climate_Dashboard.css"
 import menu_button from "../../assets/images/icons/icons8-arrow.svg"
 
 // Thermo
-import Thermostat1 from "../../components/climate/thermostat1";
-import Thermostat2 from "../../components/climate/thermostat2";
-import Thermostat3 from "../../components/climate/thermostat3";
-import Thermostat4 from "../../components/climate/thermostat4";
-import Thermostat5 from "../../components/climate/thermostat5";
-
 
 
 
@@ -87,27 +81,23 @@ const ClimateDashboard = () =>{
                 
                   <div className="container_thermo">
                     <p className="climate_label"> Dine Hall</p>
-                      <Thermostat1 />
                   </div>
 
                   <div className="container_thermo">
                   <p className="climate_label"> Library Hall</p>
-                  <Thermostat2 />
                   </div>
 
                   <div className="container_thermo">
                   <p className="climate_label"> Master </p>
-                  <Thermostat3 />
                   </div>
 
                   <div className="container_thermo">
                   <p className="climate_label"> Top Floor</p>
-                  <Thermostat4 />
                   </div>
 
                   <div className="container_thermo">
                   <p className="climate_label"> West Rooms</p>
-                  <Thermostat5 />
+           
                   </div>
         
                 </div>

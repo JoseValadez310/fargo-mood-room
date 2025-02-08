@@ -42,8 +42,8 @@
 /* Room selection tiles*/
 
 .room_selection_options{
-    grid-column: 2/13;
-    grid-row: 2/9;
+    grid-column: 2/12;
+    grid-row: 2/8;
 
     width: 100%;
     height: 100%;
@@ -65,8 +65,8 @@
 
 .room_card{
     animation: room_selection 1000ms;
-    height: 17rem;
-    width: 17rem;
+    height: 15rem;
+    width: 14rem;
 
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -220,11 +220,11 @@
     .rooms_dashboard{
         grid-template-rows: 6% 1fr 1fr 1fr 1fr 1fr 1fr 6%;
     }
-.rooms_dashboard .title_info{
-    font-size: x-large;
-    grid-column: 2/12;
+    .rooms_dashboard .title_info{
+        font-size: x-large;
+        grid-column: 2/12;
 
-}
+    }
 
     .mobile_back_btn{
         display: contents;
@@ -235,52 +235,52 @@
  /*
     ------------------------------------------- Nav
  */   
-.nav_container{
-    grid-column: 1/13;
-    grid-row: 8;
+    .nav_container{
+        grid-column: 1/13;
+        grid-row: 8;
 
-    display: flex;
-   
-}
-
-.nav_clock{
-    display: none;
-}
-
-.back_button{
-    display: none;
-}
-.mobile_back_btn .back_button{
-    display: block;
-}
-.nav{
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-    .nav p{
-        font-size: medium;
+        display: flex;
+    
     }
 
-
-/*
----------------------------------------------- Cards
-*/
-.room_selection_options{
-    grid-column: 1/13;
-    grid-row: 2/8;
-}
-.room_card{
-    height: 10rem;
-    width: 11rem;
-}
-    .room_card .room_name{
-        font-size: 1.1rem;
+    .nav_clock{
+        display: none;
     }
 
+    .back_button{
+        display: none;
+    }
+    .mobile_back_btn .back_button{
+        display: block;
+    }
+    .nav{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+        .nav p{
+            font-size: medium;
+        }
 
 
-}
+    /*
+    ---------------------------------------------- Cards
+    */
+    .room_selection_options{
+        grid-column: 1/13;
+        grid-row: 2/8;
+    }
+    .room_card{
+        height: 10rem;
+        width: 11rem;
+    }
+        .room_card .room_name{
+            font-size: 1.1rem;
+        }
+
+
+
+    }
 
 
 
@@ -292,7 +292,7 @@
 
 @media only screen and (max-device-width: 390px) and (max-device-width: 763px) and (orientation: portrait){
     .room_card{
-        height: 10rem;
-        width: 10.75rem;
+        height: 8.75rem;
+        width: 9.75rem;
     }
 }
