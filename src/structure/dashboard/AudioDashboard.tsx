@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
-import {useNavigate} from "react-router-dom"
 import "../../assets/css/dashboard_css/Audio_Dashboard.css";
 
 
@@ -674,7 +673,7 @@ const MediaServerWebSocket: React.FC = () => {
 
 
 
-    const navigate = useNavigate()
+    
 
     const zoneMenu = (id:string) =>{
       
@@ -692,16 +691,7 @@ const MediaServerWebSocket: React.FC = () => {
    
       <div className='audio_dashboard'>
 
-<div style={{display:"flex", justifyContent:"center", alignItems:"center", gridColumn:'1/2',gridRow:'1' }}>
-      <button className="back_button" onClick={() => navigate(-1)} style={{zIndex:"10"}}>
-            <img 
-              className='back_button_image' 
-              src={backbutton} 
-              alt="" 
-              style={{height:"60%", zIndex:"1px"}} 
-            />
-          </button>
-    </div>
+
           
 
     <div className='menu_tablet' onClick={() => zoneMenu("menuOpen")}>
@@ -711,18 +701,11 @@ const MediaServerWebSocket: React.FC = () => {
               src={menu} 
               style={{height:"60%", zIndex:"1px"}} 
             />
+            <p> Audio Zones</p>
           </button>
     </div>
 
-    <div className='menu_mobile' onClick={() => zoneMenu("menuOpen")}>
-      <button className="back_button" style={{zIndex:"10"}}>
-            <img 
-              className='back_button_image' 
-              src={menu} 
-              style={{height:"60%", zIndex:"1px"}} 
-            />
-          </button>
-    </div>
+   
 
 
     <div className={openZones? "zone_menu": "display_none"} style={{gridColumn:'1/10', gridRow:'1/10', paddingInline:".2rem"}}>
@@ -1144,13 +1127,7 @@ const MediaServerWebSocket: React.FC = () => {
          
 
 
-          <div style={{display:"flex", justifyContent:"center", alignItems:"center", gridColumn:'1/3',gridRow:'1' }}>
-              <div  className="mobile_back_btn" onClick={() => navigate(-1)}> 
-                  <button className="back_button">
-                      <img src={backbutton}/>
-                  </button>
-              </div> 
-          </div> 
+         
         
         
      
@@ -1242,7 +1219,7 @@ const MediaServerWebSocket: React.FC = () => {
 
         <div className='music_button_container'>
           <button 
-            className="home_button" 
+            className="back_button" 
             onClick={() => {
               console.log("[music_button] Toggling browser menu");
               if (!isBrowseMenuVisible) {
@@ -1260,15 +1237,20 @@ const MediaServerWebSocket: React.FC = () => {
                 }
               }
             }}
+        
           >
             {isBrowseMenuVisible 
               ? (isAtTopMenu 
-                  ? <img style={{height:"76%"}} src={close} alt="Close"/> 
-                  : <img style={{height:"76%"}} src={topmenu} alt="top menu"/>
+                  ? 
+                  <> <p>Exit</p> <img style={{height:"76%"}} src={close} alt="Close"/>  </>
+                  : 
+                  <> <p> Top Menu</p> <img style={{height:"76%"}} src={topmenu} alt="top menu"/>  </>
                 )
-              : <img style={{height:"76%"}} src={musicIcon} alt="Music"/>
+              : <> <p>Music Selection</p> <img style={{height:"76%"}} src={musicIcon} alt="Music"/>   </>
             }
           </button>
+
+         
         </div>
 
         <div className='browser_container'>

@@ -11,35 +11,15 @@ import "../src/assets/css/index.css"
 
 // Dashboard
 import Home from './structure/dashboard/HomeDashboard';
-import RoomsDashboard from './structure/dashboard/RoomDashboard';
 import AudioDashboard from './structure/dashboard/AudioDashboard'
-import LightDashboard from './structure/dashboard/LightDashboard'
-import Climate  from './structure/dashboard/ClimateDashboard';
-import Security from './structure/dashboard/SecurityDashboard'
-import PoolSpa from './structure/dashboard/PoolSpaDashboard';
+
 
 // Pages -------------------------------------------------------------------------
 
-// upStairs
-import MasterBedroom from './structure/page/upStairs/masterbedroom';
-import GuestBedroom from './structure/page/upStairs/guestbedroom';
-import GuestBathroom from "./structure/page/upStairs/guestbathroom"
-import StevesBath from './structure/page/upStairs/stevesbath';
-import EllensOffice from './structure/page/upStairs/ellensoffice';
-import EllensBath from './structure/page/upStairs/ellensbath';
-import EllensExcercise from './structure/page/upStairs/ellensexcercise';
-import Mediaroom from './structure/page/upStairs/mediaroom';
+import Mediaroom from './structure/page/mediaroom';
 
 
-// main
-import Breakfast from './structure/page/main/breakfast';
-import DinningRoom from './structure/page/main/dinningroom';
-import FamilyRoom from './structure/page/main/FamilyRoom';
-import GameRoom from './structure/page/main/gameroom';
-import KitchenCabient from './structure/page/main/kitchenCabinet';
 
-// down stairs
-import Arcade from './structure/page/downStairs/arcade';
 
 
 
@@ -65,67 +45,12 @@ function App() {
   },
 
   // ------------------------------------ Dashboards
-  {
-    path: '/roomsDashboard',
-    element: <RoomsDashboard />
-  },
+
   {
     path: '/AudioDashboard',
     element: <AudioDashboard />
   },
-  {
-    path: '/LightDashboard',
-    element: <LightDashboard />
-  },
-  {
-    path: '/Climate',
-    element: <Climate />
-  },
-  {
-    path: '/Security',
-    element: <Security />
-  },
-  {
-    path: '/PoolSpa',
-    element: <PoolSpa />
-  },
-  
-  //------------------------------------ Second Floor
-
-  {
-    path: '/masterbedroom',
-    element: <MasterBedroom />
-  },
-
-  {
-    path: '/guestbedroom',
-    element: <GuestBedroom />
-  },
-
-  {
-    path: '/guestbathroom',
-    element: <GuestBathroom />
-  },
-
-  {
-    path: '/stevesbath',
-    element: <StevesBath />
-  },
-
-  {
-    path: '/ellensoffice',
-    element: <EllensOffice />
-  },
-
-  {
-    path: '/ellensbath',
-    element: <EllensBath />
-  },
-
-  {
-    path: '/ellensexcercise',
-    element: <EllensExcercise />
-  },
+ 
 
   {
     path: '/mediaroom',
@@ -133,39 +58,7 @@ function App() {
   },
 
 
-   //------------------------------------ Main Floor
-  {
-    path: '/breakfast',
-    element: <Breakfast/>
-  },
-  {
-    path: '/familyroom',
-    element: <FamilyRoom />
-  },
- 
-  {
-    path: '/dinningroom',
-    element: <DinningRoom />
-  },
- 
-
-  {
-    path: '/gameroom',
-    element: <GameRoom />
-  },
-  {
-    path: '/kitchencabinet',
-    element: <KitchenCabient />
-  },
-
   
-   //------------------------------------ Main Floor
-   {
-    path: '/arcade',
-    element: <Arcade/>
-    },
-
-
 
 
 

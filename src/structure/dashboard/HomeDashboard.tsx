@@ -13,13 +13,15 @@ import "../../assets/css/dashboard_css/Home_Dashboard.sass"
 import DateDisplay from "../../components/DateDisplay"
 import Clock       from "../../components/Clock"
 
-// tile icons
-import Rooms   from "../../assets/images/icons/icons8-room.svg"
-import Audio   from "../../assets/images/icons/icons8-music.svg"
-import Light   from "../../assets/images/icons/noun-light-bulb-2216273.svg"
-import Climate from "../../assets/images/icons/icons8-winter.svg"
-import Pool    from "../../assets/images/icons/icons8-indoor-swimming-pool.svg"
-import Security from "../../assets/images/icons/icons8-smart-home-shield.svg"
+//  icons
+import TV          from "../../assets/images/icons/icons8-tv.svg"
+import music       from "../../assets/images/icons/icons8-music.svg"
+
+
+//
+
+import MediaRoom from "../page/mediaroom"
+import AudioDashboard from "../dashboard/AudioDashboard"
 
 const HomeDashboard = () => {
 
@@ -31,6 +33,26 @@ const HomeDashboard = () => {
             setViewportViewer(true)
         }
         setCount(count+1)
+
+    }
+
+
+
+    const [mediaPage, setMediaPage] = useState(true)
+    const [musicPage, setMusicPage] = useState(false)
+
+
+    const switchViewer = (id:string) => {
+
+
+        if(id === 'media'){
+            setMediaPage(true)
+            setMusicPage(false)
+        } 
+        else if(id === 'music'){
+            setMediaPage(false)
+            setMusicPage(true)
+        }
     }
 
 
@@ -38,7 +60,7 @@ const HomeDashboard = () => {
 
         <div className="living_room_page">
           
-                <div className="time_date_info">
+                <div className="display_none">
                     <div className="clock_info" onClick = {ViewPortCounter} style={{width:"100%"}}>
                         <Clock  />
 
@@ -52,38 +74,60 @@ const HomeDashboard = () => {
                     </div>
                 </div>
             
-                <div className="dashboard_container">
-                    <Link  className="card_container" to='/RoomsDashboard' style={{textDecoration:"none"}}> 
-                        <img className="card_image" src={Rooms}/>
-                        <p className="card_title"> Rooms </p>
-                    </Link>
-                
-                    <Link  className="card_container" to='/AudioDashboard' style={{textDecoration:"none"}}> 
-                        <img className="card_image" src={Audio}/>
-                        <p className="card_title"> Audio </p>
-                    </Link> 
-                
-                    <Link  className="card_container" to='/LightDashboard' style={{textDecoration:"none"}}> 
-                        <img className="card_image" src={Light}/>
-                        <p className="card_title"> Lights </p>
-                    </Link> 
-                
-                    <Link  className="display_none" to='/Climate' style={{textDecoration:"none"}}> 
-                        <img className="card_image" src={Climate}/>
-                        <p className="card_title"> Climate </p>
-                    </Link> 
 
-                    <Link  className="display_none" to='/Security' style={{textDecoration:"none"}}> 
-                        <img className="card_image" src={Security}/>
-                        <p className="card_title"> Security </p>
-                    </Link> 
-                
-                    <Link  className="display_none" to='/PoolSpa' style={{textDecoration:"none"}}> 
-                        <img className="card_image" src={Pool}/>
-                        <p className="card_title"> Pool - Spa </p>
-                    </Link> 
-                </div>
 
+
+
+
+
+
+        
+            <div className="activity_container">
+
+                {mediaPage? <MediaRoom />: <AudioDashboard />}
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+      
+
+                <div className="bottom_nav">
+
+                    <div className="nav">
+                            <button onClick={() => switchViewer("media")} className={mediaPage?   "btn_selected" : "btn_not_selected"} >  
+                                <img src={TV}/> 
+                                <p>Media</p>
+                            </button>
+                        
+
+                            <button onClick={() => switchViewer("music")} className={musicPage? "btn_selected" : "btn_not_selected"} >  
+                                <img src={music}  /> 
+                                <p>Music</p>
+                            </button>
+                    </div>
+
+           
+
+       </div>
 
            
 
