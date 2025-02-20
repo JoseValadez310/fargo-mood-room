@@ -11,16 +11,9 @@ import "../src/assets/css/index.css"
 
 // Dashboard
 import Home from './structure/dashboard/HomeDashboard';
-import AudioDashboard from './structure/dashboard/AudioDashboard'
 
 
 // Pages -------------------------------------------------------------------------
-
-import Mediaroom from './structure/page/mediaroom';
-
-
-
-
 
 
 
@@ -29,9 +22,7 @@ import Mediaroom from './structure/page/mediaroom';
 
 // Tools
 import ScreenSize from './structure/tools/ScreenSize';
-
-       
-     import imageBackground from "../src/assets/images/backgrounds/willian-justen-de-vasconcellos-T_Qe4QlMIvQ-unsplash.jpg"
+import imageBackground from "../src/assets/images/backgrounds/mark-de-jong-BmhoEBTXKxI-unsplash.jpg"
         
         
    
@@ -43,33 +34,6 @@ function App() {
     path: '/',
     element: <Home />
   },
-
-  // ------------------------------------ Dashboards
-
-  {
-    path: '/AudioDashboard',
-    element: <AudioDashboard />
-  },
- 
-
-  {
-    path: '/mediaroom',
-    element: <Mediaroom />
-  },
-
-
-  
-
-
-
-
-//---------------------------------------------
-
-  
- 
- 
-
-  //-------------------------------------- outdoors
 
   
 

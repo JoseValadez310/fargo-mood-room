@@ -261,7 +261,7 @@ a{
 
     z-index: 1;
 
-    overflow: hidden;
+
     position: relative;
     animation: fade 1000ms;
    
@@ -279,7 +279,7 @@ a{
   border-radius: 15px;
   opacity: 0.75;
   z-index: 0;
-  box-shadow: inset 5px 5px 8px rgb(120, 120, 120), inset -5px -5px 8px rgb(120, 120, 120);
+  box-shadow:  2px 2px 10px rgb(0, 0, 0), -2px -2px 10px rgb(0, 0, 0);
 
 }
 
@@ -400,7 +400,6 @@ a{
        max-height: 100vh; /* Ensure container fits within viewport height */
        box-sizing: border-box; /* Prevent padding or border from causing overflow */
 
-       overflow: hidden;
 
 }
 
@@ -415,6 +414,7 @@ a{
        opacity: 0.65;
        z-index: 0;
        border-radius: 20px;
+       box-shadow:  2px 2px 20px rgb(22, 22, 22), -2px -2px 20px rgb(22, 22, 22);
    }
 
    .user_title_controller p{ 
@@ -533,8 +533,7 @@ a{
             background-color: rgb(94, 198, 233);
 
         }
-    .volume_container .btn_square_wide p{
-    }
+   
     .mute_btn_txt{
         border-top: solid 1px rgb(0, 0, 0);
         font-size: small;
@@ -1079,8 +1078,8 @@ a{
         top: 5px;
     }
         .source_card{
-            height: 10rem;
-            width: 20rem;
+            height: 15rem;
+            width: 15rem;
         }
             .source_card .img_container {
                 height: 70%;
@@ -1465,10 +1464,7 @@ a{
     /*
     ----------------------------------------------------------------------- source card
     */
-    .source_card{
-        height:8.7rem;
-        width: 10.75rem;
-    }
+
 
      /*
     ----------------------------------------------------------------------- light cards

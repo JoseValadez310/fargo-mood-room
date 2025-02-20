@@ -3,28 +3,23 @@ $dark-gray: rgb(70,70,70)
 
 
 
-.living_room_page
-  
-
+.home
+    z-index: 10
     display: grid
     grid-template-columns: repeat(12, 1fr)
-    grid-template-rows: repeat(8, 1fr)
+    grid-template-rows: repeat(12, 1fr)
     justify-items: center
     align-items: center
-    gap: 10px
-
-    overflow: hidden
+    gap: 2px
     height: 100vh
     width: 100vw
     box-sizing: border-box 
+    padding: 1rem
 
-    z-index: 10
-
-    
-
-.time_date_info
+//---------------------------------------------------------------------------------------------------------------- Time, date and hiden menu 
+.time_date
     text-align: center
-    grid-column:2/8 
+    grid-column:1/13 
     grid-row: 1/3
     background-color: transparent     
     width: 100%
@@ -35,203 +30,253 @@ $dark-gray: rgb(70,70,70)
     align-items: center
     flex-direction: column
     animation: controller-load 1000ms
+    text-shadow: 0px 0px 10px black
 
 
 .time_date_info p
     color: rgb(255, 255, 255)
     width:  100%
+    text-shadow: 0px 0px 10px black
 
-    
+.tool
+    width: 10rem
+    background-color: rgb(70,70,70)
+    border-radius: 10px
+    margin-block: 10px
 
 
-.dashboard_container
-    grid-column:2/8 
-    grid-row: 4/7
+//------------------------------------------------------------------------------------- card container
+
+
+.menu_container
+    grid-column: 1/13
+    grid-row: 3/12
     width: 100%
     height: 100%
-    display: grid
-    grid-template-columns: repeat(3,1fr)
-    grid-template-rows: repeat(1,1fr)
-    gap: 1rem
-    position: relative
-    z-index: 1
-    align-items: center
-
-.dashboard_container:before
-    content: " "
-    position: absolute
-    top: 0
-    bottom: 0
-    width: 100%
-    height: 100%
-    opacity: 0.65
-    z-index: 0
-    border-radius: 20px
-    
-
-.card_container
     display: flex
     justify-content: center
     align-items: center
+    flex-wrap: wrap
+    gap: 1rem
+    
+.menu
+    height: 85%
+    width: 20rem
+    display: flex
+    justify-content: center
     flex-direction: column
-    gap: 1rem 
-    height: 90%
-    width: 100%
-    overflow: hidden
-    border-radius: 15px 
+    background-color: rgb(70,70,70,0.5)
     backdrop-filter: blur(25px)
-    animation: controller-load 1000ms
-    position: relative
-    z-index: 1
+    border-radius: 15px
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 10% 90%
+    justify-items: center
 
-.card_container:before
-    content: " "
-    position: absolute
-    top: 0
-    bottom: 0
-    width: 100%
-    height: 100%
-    background-color: rgb(70, 70, 70)
-    border-radius: 10px 
-    opacity: 0.75
-    z-index: 0
-    box-shadow: inset 5px 5px 8px rgb(120, 120, 120), inset -5px -5px 8px rgb(120, 120, 120)
+.title
+    grid-column: 1/2
+    grid-row: 1/2
+    display: flex
+    justify-content: flex-start
+    align-items: flex-end
   
-
-
-
-
-.card_image
-    height: 35%
-    filter: invert(1)
-    z-index: 1
-   
-
-.card_title
-    padding: 0%
+    width: 80%
     margin: 0%
-    width: 70%
-    font-size: 1.25rem
-    font-weight: light
-    color: rgb(255, 255, 255)
-    text-align: center
-    z-index: 1
-        
+    font-weight: 100
+    font-size: x-large
+    border-bottom: solid 1px rgba(241, 241, 241, 0.5)
 
-.activity_container
-    grid-column: 1/13
-    grid-row: 1/8
-    width: 100%
-    height: 100%
-       
-      
-            
-            
+.button_container
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    flex-direction: column
+    height: 100%    
+    width: 100% 
+    gap: .25rem
 
-@media screen  and (orientation: portrait) 
+.btn_square
+    width: 85% 
+    height: 3.75rem 
+    background-color: rgb(255,255,255, 0.325 )         
+                  
 
 
-    .time_date_info 
-        grid-column: 2/8
-        text-align: center
 
-    .time_date_info p
-        font-size: xx-large
-        text-align: center
-        
+//---------------------------------------- mobile view 
 
-    .weather_info
-        grid-column: 5/8
 
-    .dashboard_info
-        grid-column: 2/8
-        grid-row: 3/8
-        height: 100%
-        width: 100%
-
-    .dashboard_container
-        display: flex
-        flex-direction: row
-        flex-wrap: wrap 
-        justify-content: center
-        align-content: center
-    .family_room
-        width: 35%
-
-    .master_bedroom
-        width: 35%
-
-    .card_container
-        height: 15rem    
-        width: 15rem
-                        
                 
 
-@media only screen and (max-device-width: 430px) and (max-device-width: 837px) and (orientation: portrait) 
-    .source_select_home
-        padding-inline: 1rem
-  
-    .time_date_info 
-        grid-column: 1/9
-        grid-row: 1/3
-        width: 100%
+@media (max-width: 1400px) 
+    .menu
+        width: 18rem
 
-        background-color: transparent
-        backdrop-filter: blur(0px)
-        border-radius: 0%
-    
-    .weather_info
-        grid-column: 3/9
-        grid-row: 4/6
+@media (max-width: 1200px) 
+    .menu
+        height: 85%
+        width: 20rem
+    .btn_square 
+        height: 3.25rem
 
-        width: 100%
-        display: none
-    
-    .dashboard_info
-        grid-column: 1/9
-        grid-row: 3/9
-        width: 100%
-        height: 100%
-    
-    .dashboard_container
+@media (max-width: 600px) 
+    .menu
+        width: 85%
+        height: 65%
+    .menu_container
+        overflow-y: scroll
+
+
+
+@media only screen and (max-width: 600px) and (orientation: portrait)
+    .menu_container
+        align-content: flex-start
+
+    .short_menu
+        height: 6.5rem
+        width: 20rem
         display: flex
-        height: 100%
-        grid-row: 3/9
+        justify-content: center
+        flex-direction: column
+        background-color: rgb(70,70,70,0.5)
+        backdrop-filter: blur(25px)
+        border-radius: 15px
+        display: flex
+        justify-content: center
+        align-items: center
+
+    .long_menu
+        width: 20rem
+        height: 27rem
+        display: flex
+        justify-content: center
+        flex-direction: column
+        background-color: rgb(70,70,70,0.5)
+        backdrop-filter: blur(25px)
+        border-radius: 15px
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: 5rem max-content
+        justify-items: center
+        animation: open_container 500ms
+        overflow: hidden
+
+
+    .exit_menu
+        width: 20rem
+        display: flex
+        justify-content: center
+        flex-direction: column
+        background-color: rgb(70,70,70,0.5)
+        backdrop-filter: blur(25px)
+        border-radius: 15px
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: 6.5rem  max-content
+        justify-items: center
+        animation: exit_container 500ms
+        overflow: hidden
+
+
+
+
+    .short_menu .title
+        justify-content: center
+        align-items: center
+        margin-block: 10px 
+        border: none
+
+    .long_menu .title
+        justify-content: center
+        align-items: center
+        margin-block: 10px 
+    
+    .exit_menu .title
+        justify-content: center
+        align-items: center
+        margin-block: 10px 
+   
     
 
-    .card_container
-        height: 11rem
-        width: 75%
-    
-    .room_container
-        height: 100%
-        width: 100% 
-        grid-row: 2
-        grid-column: 2
-
-    .room_container .family_room
-        height: 100%
-        width: 100%
-    
-    .room_container :family_room home_room_card img
-        filter: none
-    
-    .room_container :family_room home_room_card 
-        color: black
-                    
-    .dashboard_title
+    .close_button_container
         display: none
+
+    .open_button_container
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        height: 100
+        width: 100%
+        gap: 1rem
+        animation: open_button_container .75s
+
+    .exit_button_container
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        height: 100
+        width: 100%
+        gap: 1rem
+        animation: exit_button_container .75s
+    
+
+
+
+
+
+
+
+
+
+
+        @keyframes open_button_container 
+            0%
+               
+                transform: translatey(100%)
+                opacity: 0
+            
+
+            100%
+             
+                transform: translateY(0%)
+                opacity: 100
+          
+          
+
+        @keyframes exit_button_container 
+            0%
+                transform: translatey(0%)
+                opacity: 1
+            
+
+            100%
+                transform: translateY(100%)
+                opacity: 0
+
+        
+                
+        @keyframes close_button_container 
+            0%
+               
+                opacity: 100
+            
+
+            100%
+                opacity: 0  
         
 
+@keyframes exit_container
+    0%
+        height: 27rem
 
-    
+    100%
+          height: 6.5rem
 
+@keyframes open_container
+    0%
+          height: 6.5rem
 
-
-
-
-
-
-
-
-
+    100%
+        height: 27rem
